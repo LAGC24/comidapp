@@ -14,7 +14,7 @@ app.use(express.static('app'));
 
 
 
-// Routing1
+// Routing
 var routeRoot = require('./routes/root');
 var routeResult = require('./routes/results');
 var routeLogin = require('./routes/login');
