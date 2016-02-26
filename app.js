@@ -16,10 +16,12 @@ app.use(express.static('app'));
 // Routing
 var routeRoot = require('./routes/root');
 var routeResult = require('./routes/results');
+var routeLogin = require('./routes/login');
 
 // Root.
 app.get('/', routeRoot.root);
 app.get('/results', routeRoot.root);
+app.get('/login', routeLogin.root);
 
 // Root's Results.
 app.get('/results/:category', routeResult.viewCategory);
@@ -30,7 +32,7 @@ app.get('/results/:category/:restaurant', routeResult.viewRestaurant);
 
 
 
-var port = process.env.PORT || process.argv[2] || 80;
+var port = process.env.PORT || process.argv[2] || 8000;
 
 app.listen(port, function() {
   console.log('Running Express, running on port ', port)
