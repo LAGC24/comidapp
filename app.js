@@ -13,6 +13,7 @@ app.set('viewsDir', __dirname + '/app'); // Later, move all and change to /views
 app.use(express.static('app'));
 
 
+
 // Routing
 var routeRoot = require('./routes/root');
 var routeResult = require('./routes/results');
